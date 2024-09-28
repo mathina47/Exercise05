@@ -1,0 +1,17 @@
+name: 05-1-Event_Filters_and_Activity_Types
+on: 
+  pull_request:
+    types:
+     - opened
+     - synchronize
+    branches:
+     - 'master'
+jobs:
+  echo_to_the_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: filter
+        run: echo "Running whenever a PR is opened or synchronized AND base branch is master."
+      
+    
+    
