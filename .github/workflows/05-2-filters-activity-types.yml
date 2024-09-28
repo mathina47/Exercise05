@@ -1,0 +1,16 @@
+name: 05-2-Event_Filters_and_Activity_Types
+on: 
+  pull_request: 
+    types:
+      - closed
+    branches:
+      - 'master'
+jobs:
+  echo_to_the_workflow:
+     runs-on: ubuntu-latest
+     steps:
+       - name: filter1
+         run: echo "Running whenever a PR is closed"
+         
+     
+    
